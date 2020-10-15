@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server:
+    build: ambari-server
+    restart: always
+    command: ./entrypoint.sh
+
+  c1:
+    build: ambari-server
+    restart: always
+
+  c2:
+    build: ambari-server
+    restart: always
