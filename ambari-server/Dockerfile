@@ -61,3 +61,4 @@ RUN echo DefaultEnvironment=\"JAVA_HOME=/usr/jdk64/jdk1.8.0_112/bin/java\" >> /e
 
 EXPOSE 8080
 ADD entrypoint.sh /tmp/
+CMD ["/tmp/entrypoint.sh"]
