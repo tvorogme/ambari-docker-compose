@@ -1,1 +1,94 @@
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMEmFEu1LnoQgxMODc9CkdYEBG7HuJnex4lkRsG3A4uhx4DrzmMYsXcjO1yd0iNcp5jYTHPs2L+xJpwTIQyfGeT1c6nIMBZ8ftnv/6O6hhI1o6qN0VkCNY43W/QLc+6QAm9ttYDdRVjqdzn/riUQUIGd5hE4qHnN3AEt9nKnTKsOm8jfFn9nNCTnz/McvRuQqGwhslnm1ysr6P59Z4B1AxL5KbHHjP5ObGQ07wVBq+7eWIARy9L5+e2bboptanBhTzDkRJPaplv2sMNOvQ5i/eY8V8bM+Zr6OU30brs/o6q7y4c9VqL5cd3J6aA3CePlzSSyK4nEwRcXPXYeF+K/GI2QrQef2Gu0pTB2LcW1Jn+mKCZeNQRHfRWk6ha3TU26VtT8VEdzln5E1WJTsOIuk8GhjUtOndnA+lgkCoNo1Gv1v/oRkTn5GtLbJpyCAfbMeRwioSXKF1DFofJu9JRfwIBnUCVNL7XmnPxt+z9YcOSgUcOwcSulvdgK53Ja3VTG8= tvorogme@archlinux
+
+
+https://wiki.centos.org/yum-errors
+
+If above article doesn't help to resolve this issue please use https://bugs.centos.org/.
+
+("INFO 2020-10-15 16:45:38,507 main.py:155 - loglevel=logging.INFO
+INFO 2020-10-15 16:45:38,510 Hardware.py:68 - Initializing host system information.
+INFO 2020-10-15 16:45:38,515 Hardware.py:188 - Some mount points were ignored: /dev, /sys/fs/cgroup, /dev/shm, /etc/hosts, /proc/asound, /proc/acpi, /proc/scsi, /sys/firmware
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+WARNING 2020-10-15 16:45:38,522 Facter.py:499 - Can't get the IP address for OS NOT SUPPORTED
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+INFO 2020-10-15 16:45:38,522 Facter.py:202 - Directory: '/etc/resource_overrides' does not exist - it won't be used for gathering system resources.
+INFO 2020-10-15 16:45:38,524 Hardware.py:73 - Host system information: {'kernel': 'Linux', 'domain': '', 'physicalprocessorcount': 12, 'kernelrelease': '5.8.14-arch1-1', 'uptime_days': '0', 'memorytotal': 7753956, 'swapfree': '0.00 GB', 'memorysize': 7753956, 'osfamily': 'redhat', 'swapsize': '0.00 GB', 'processorcount': 12, 'netmask': None, 'timezone': 'UTC', 'hardwareisa': 'x86_64', 'memoryfree': 630980, 'operatingsystem': 'centos', 'kernelmajversion': '5.8', 'kernelversion': '5.8.14', 'macaddress': 'ED:F6:95:4F:8B:10', 'operatingsystemrelease': '7.6.1810', 'ipaddress': '172.18.0.4', 'hostname': 'c24d889f6e73', 'uptime_hours': '4', 'fqdn': 'c24d889f6e73', 'id': 'root', 'architecture': 'x86_64', 'selinux': False, 'mounts': [{'available': '127107468', 'used': '272033860', 'percent': '69%', 'device': '/dev/nvme0n1p1', 'mountpoint': '/', 'type': 'btrfs', 'size': '419430400'}], 'hardwaremodel': 'x86_64', 'uptime_seconds': '14714', 'interfaces': 'OS NOT SUPPORTED'}
+INFO 2020-10-15 16:45:38,525 DataCleaner.py:39 - Data cleanup thread started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:120 - Data cleanup started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:122 - Data cleanup finished
+INFO 2020-10-15 16:45:38,527 hostname.py:67 - agent:hostname_script configuration not defined thus read hostname 'c24d889f6e73' using socket.getfqdn().
+ERROR 2020-10-15 16:45:38,527 main.py:269 - Ambari agent machine hostname (c24d889f6e73) does not match expected ambari server hostname (c1). Aborting registration. Please check hostname, hostname -f and /etc/hosts file to confirm your hostname is setup correctly
+INFO 2020-10-15 16:45:38,527 ExitHelper.py:57 - Performing cleanup before exiting...
+INFO 2020-10-15 16:45:38,527 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+INFO 2020-10-15 16:45:38,528 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+", None)
+("INFO 2020-10-15 16:45:38,507 main.py:155 - loglevel=logging.INFO
+INFO 2020-10-15 16:45:38,510 Hardware.py:68 - Initializing host system information.
+INFO 2020-10-15 16:45:38,515 Hardware.py:188 - Some mount points were ignored: /dev, /sys/fs/cgroup, /dev/shm, /etc/hosts, /proc/asound, /proc/acpi, /proc/scsi, /sys/firmware
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+WARNING 2020-10-15 16:45:38,522 Facter.py:499 - Can't get the IP address for OS NOT SUPPORTED
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+INFO 2020-10-15 16:45:38,522 Facter.py:202 - Directory: '/etc/resource_overrides' does not exist - it won't be used for gathering system resources.
+INFO 2020-10-15 16:45:38,524 Hardware.py:73 - Host system information: {'kernel': 'Linux', 'domain': '', 'physicalprocessorcount': 12, 'kernelrelease': '5.8.14-arch1-1', 'uptime_days': '0', 'memorytotal': 7753956, 'swapfree': '0.00 GB', 'memorysize': 7753956, 'osfamily': 'redhat', 'swapsize': '0.00 GB', 'processorcount': 12, 'netmask': None, 'timezone': 'UTC', 'hardwareisa': 'x86_64', 'memoryfree': 630980, 'operatingsystem': 'centos', 'kernelmajversion': '5.8', 'kernelversion': '5.8.14', 'macaddress': 'ED:F6:95:4F:8B:10', 'operatingsystemrelease': '7.6.1810', 'ipaddress': '172.18.0.4', 'hostname': 'c24d889f6e73', 'uptime_hours': '4', 'fqdn': 'c24d889f6e73', 'id': 'root', 'architecture': 'x86_64', 'selinux': False, 'mounts': [{'available': '127107468', 'used': '272033860', 'percent': '69%', 'device': '/dev/nvme0n1p1', 'mountpoint': '/', 'type': 'btrfs', 'size': '419430400'}], 'hardwaremodel': 'x86_64', 'uptime_seconds': '14714', 'interfaces': 'OS NOT SUPPORTED'}
+INFO 2020-10-15 16:45:38,525 DataCleaner.py:39 - Data cleanup thread started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:120 - Data cleanup started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:122 - Data cleanup finished
+INFO 2020-10-15 16:45:38,527 hostname.py:67 - agent:hostname_script configuration not defined thus read hostname 'c24d889f6e73' using socket.getfqdn().
+ERROR 2020-10-15 16:45:38,527 main.py:269 - Ambari agent machine hostname (c24d889f6e73) does not match expected ambari server hostname (c1). Aborting registration. Please check hostname, hostname -f and /etc/hosts file to confirm your hostname is setup correctly
+INFO 2020-10-15 16:45:38,527 ExitHelper.py:57 - Performing cleanup before exiting...
+INFO 2020-10-15 16:45:38,527 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+INFO 2020-10-15 16:45:38,528 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+", None)
+
+Connection to c1 closed.
+SSH command execution finished
+host=c1, exitcode=255
+Command end time 2020-10-15 16:45:41
+
+ERROR: Bootstrap of host c1 fails because previous action finished with non-zero exit code (255)
+ERROR MESSAGE: Connection to c1 closed.
+
+STDOUT: https://mirror.yandex.ru/epel/7/x86_64/repodata/9ee1b4ce1dda6bdab964c05a0e6e9590a2e943144c699996ffa3d3ab2e422e91-updateinfo.xml.bz2: [Errno 14] HTTPS Error 404 - Not Found
+Trying other mirror.
+To address this issue please refer to the below wiki article
+
+https://wiki.centos.org/yum-errors
+
+If above article doesn't help to resolve this issue please use https://bugs.centos.org/.
+
+("INFO 2020-10-15 16:45:38,507 main.py:155 - loglevel=logging.INFO
+INFO 2020-10-15 16:45:38,510 Hardware.py:68 - Initializing host system information.
+INFO 2020-10-15 16:45:38,515 Hardware.py:188 - Some mount points were ignored: /dev, /sys/fs/cgroup, /dev/shm, /etc/hosts, /proc/asound, /proc/acpi, /proc/scsi, /sys/firmware
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+WARNING 2020-10-15 16:45:38,522 Facter.py:499 - Can't get the IP address for OS NOT SUPPORTED
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+INFO 2020-10-15 16:45:38,522 Facter.py:202 - Directory: '/etc/resource_overrides' does not exist - it won't be used for gathering system resources.
+INFO 2020-10-15 16:45:38,524 Hardware.py:73 - Host system information: {'kernel': 'Linux', 'domain': '', 'physicalprocessorcount': 12, 'kernelrelease': '5.8.14-arch1-1', 'uptime_days': '0', 'memorytotal': 7753956, 'swapfree': '0.00 GB', 'memorysize': 7753956, 'osfamily': 'redhat', 'swapsize': '0.00 GB', 'processorcount': 12, 'netmask': None, 'timezone': 'UTC', 'hardwareisa': 'x86_64', 'memoryfree': 630980, 'operatingsystem': 'centos', 'kernelmajversion': '5.8', 'kernelversion': '5.8.14', 'macaddress': 'ED:F6:95:4F:8B:10', 'operatingsystemrelease': '7.6.1810', 'ipaddress': '172.18.0.4', 'hostname': 'c24d889f6e73', 'uptime_hours': '4', 'fqdn': 'c24d889f6e73', 'id': 'root', 'architecture': 'x86_64', 'selinux': False, 'mounts': [{'available': '127107468', 'used': '272033860', 'percent': '69%', 'device': '/dev/nvme0n1p1', 'mountpoint': '/', 'type': 'btrfs', 'size': '419430400'}], 'hardwaremodel': 'x86_64', 'uptime_seconds': '14714', 'interfaces': 'OS NOT SUPPORTED'}
+INFO 2020-10-15 16:45:38,525 DataCleaner.py:39 - Data cleanup thread started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:120 - Data cleanup started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:122 - Data cleanup finished
+INFO 2020-10-15 16:45:38,527 hostname.py:67 - agent:hostname_script configuration not defined thus read hostname 'c24d889f6e73' using socket.getfqdn().
+ERROR 2020-10-15 16:45:38,527 main.py:269 - Ambari agent machine hostname (c24d889f6e73) does not match expected ambari server hostname (c1). Aborting registration. Please check hostname, hostname -f and /etc/hosts file to confirm your hostname is setup correctly
+INFO 2020-10-15 16:45:38,527 ExitHelper.py:57 - Performing cleanup before exiting...
+INFO 2020-10-15 16:45:38,527 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+INFO 2020-10-15 16:45:38,528 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+", None)
+("INFO 2020-10-15 16:45:38,507 main.py:155 - loglevel=logging.INFO
+INFO 2020-10-15 16:45:38,510 Hardware.py:68 - Initializing host system information.
+INFO 2020-10-15 16:45:38,515 Hardware.py:188 - Some mount points were ignored: /dev, /sys/fs/cgroup, /dev/shm, /etc/hosts, /proc/asound, /proc/acpi, /proc/scsi, /sys/firmware
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+WARNING 2020-10-15 16:45:38,522 Facter.py:499 - Can't get the IP address for OS NOT SUPPORTED
+WARNING 2020-10-15 16:45:38,522 Facter.py:515 - Can't get a network interfaces list from
+INFO 2020-10-15 16:45:38,522 Facter.py:202 - Directory: '/etc/resource_overrides' does not exist - it won't be used for gathering system resources.
+INFO 2020-10-15 16:45:38,524 Hardware.py:73 - Host system information: {'kernel': 'Linux', 'domain': '', 'physicalprocessorcount': 12, 'kernelrelease': '5.8.14-arch1-1', 'uptime_days': '0', 'memorytotal': 7753956, 'swapfree': '0.00 GB', 'memorysize': 7753956, 'osfamily': 'redhat', 'swapsize': '0.00 GB', 'processorcount': 12, 'netmask': None, 'timezone': 'UTC', 'hardwareisa': 'x86_64', 'memoryfree': 630980, 'operatingsystem': 'centos', 'kernelmajversion': '5.8', 'kernelversion': '5.8.14', 'macaddress': 'ED:F6:95:4F:8B:10', 'operatingsystemrelease': '7.6.1810', 'ipaddress': '172.18.0.4', 'hostname': 'c24d889f6e73', 'uptime_hours': '4', 'fqdn': 'c24d889f6e73', 'id': 'root', 'architecture': 'x86_64', 'selinux': False, 'mounts': [{'available': '127107468', 'used': '272033860', 'percent': '69%', 'device': '/dev/nvme0n1p1', 'mountpoint': '/', 'type': 'btrfs', 'size': '419430400'}], 'hardwaremodel': 'x86_64', 'uptime_seconds': '14714', 'interfaces': 'OS NOT SUPPORTED'}
+INFO 2020-10-15 16:45:38,525 DataCleaner.py:39 - Data cleanup thread started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:120 - Data cleanup started
+INFO 2020-10-15 16:45:38,526 DataCleaner.py:122 - Data cleanup finished
+INFO 2020-10-15 16:45:38,527 hostname.py:67 - agent:hostname_script configuration not defined thus read hostname 'c24d889f6e73' using socket.getfqdn().
+ERROR 2020-10-15 16:45:38,527 main.py:269 - Ambari agent machine hostname (c24d889f6e73) does not match expected ambari server hostname (c1). Aborting registration. Please check hostname, hostname -f and /etc/hosts file to confirm your hostname is setup correctly
+INFO 2020-10-15 16:45:38,527 ExitHelper.py:57 - Performing cleanup before exiting...
+INFO 2020-10-15 16:45:38,527 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+INFO 2020-10-15 16:45:38,528 AlertSchedulerHandler.py:159 - [AlertScheduler] Stopped the alert scheduler.
+", None)
+
+Connection to c1 closed.
