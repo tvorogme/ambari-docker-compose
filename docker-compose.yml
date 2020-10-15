@@ -1,10 +1,21 @@
 version: '3'
 services:
+  postgres:
+    image: postgres:10
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: headlabs
+      POSTGRES_PASSWORD: headlabs
+      POSTGRES_USER: headlabs
+    ports:
+      - 5432:5432
+
   server:
     build: ambari-server
     restart: always
     command: ./entrypoint.sh
-
+    ports:
+    - 8080:8080
   c1:
     build: ambari-server
     restart: always

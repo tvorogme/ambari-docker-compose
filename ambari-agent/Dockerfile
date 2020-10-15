@@ -47,17 +47,17 @@ ENV PS1 "[\u@docker-ambari \W]# "
 ADD ambari.repo /etc/yum.repos.d/
 
 RUN yum install -y  ambari-agent && yum clean all
-
-# add a custom folder to the hadoop classpath
-RUN mkdir -p /usr/lib/hadoop/lib
-ENV HADOOP_CLASSPATH /data/jars/*:/usr/lib/hadoop/lib/*
-
-# do not use the docker0 interface
-#RUN sed -i "s/\"ifconfig\"/\"ifconfig eth0\"/" /usr/lib/python2.6/site-packages/ambari_agent/Facter.py
-
-# Add jars from packer image
-
-ADD init/ambari-agent.service /etc/systemd/system/ambari-agent.service
-RUN systemctl enable ambari-agent
-
-RUN echo DefaultEnvironment=\"JAVA_HOME=$JAVA_HOME\" \"HADOOP_CLASSPATH=$HADOOP_CLASSPATH\" >> /etc/systemd/system.conf
+#
+## add a custom folder to the hadoop classpath
+#RUN mkdir -p /usr/lib/hadoop/lib
+#ENV HADOOP_CLASSPATH /data/jars/*:/usr/lib/hadoop/lib/*
+#
+## do not use the docker0 interface
+##RUN sed -i "s/\"ifconfig\"/\"ifconfig eth0\"/" /usr/lib/python2.6/site-packages/ambari_agent/Facter.py
+#
+## Add jars from packer image
+#
+#ADD init/ambari-agent.service /etc/systemd/system/ambari-agent.service
+#RUN systemctl enable ambari-agent
+#
+#RUN echo DefaultEnvironment=\"JAVA_HOME=$JAVA_HOME\" \"HADOOP_CLASSPATH=$HADOOP_CLASSPATH\" >> /etc/systemd/system.conf
