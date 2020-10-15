@@ -17,9 +17,9 @@ services:
     ports:
     - 8080:8080
   c1:
-    build: ambari-server
+    build: ambari-agent
     restart: always
 
   c2:
-    build: ambari-server
+    build: ambari-agent
     restart: always
