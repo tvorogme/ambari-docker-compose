@@ -12,6 +12,7 @@ services:
 
   server:
     build: ambari-server
+    entrypoint: /tmp/entrypoint.sh
     restart: always
     ports:
       - 8080:8080
@@ -20,8 +21,10 @@ services:
     restart: always
     environment:
       - SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMEmFEu1LnoQgxMODc9CkdYEBG7HuJnex4lkRsG3A4uhx4DrzmMYsXcjO1yd0iNcp5jYTHPs2L+xJpwTIQyfGeT1c6nIMBZ8ftnv/6O6hhI1o6qN0VkCNY43W/QLc+6QAm9ttYDdRVjqdzn/riUQUIGd5hE4qHnN3AEt9nKnTKsOm8jfFn9nNCTnz/McvRuQqGwhslnm1ysr6P59Z4B1AxL5KbHHjP5ObGQ07wVBq+7eWIARy9L5+e2bboptanBhTzDkRJPaplv2sMNOvQ5i/eY8V8bM+Zr6OU30brs/o6q7y4c9VqL5cd3J6aA3CePlzSSyK4nEwRcXPXYeF+K/GI2QrQef2Gu0pTB2LcW1Jn+mKCZeNQRHfRWk6ha3TU26VtT8VEdzln5E1WJTsOIuk8GhjUtOndnA+lgkCoNo1Gv1v/oRkTn5GtLbJpyCAfbMeRwioSXKF1DFofJu9JRfwIBnUCVNL7XmnPxt+z9YcOSgUcOwcSulvdgK53Ja3VTG8= tvorogme@archlinux
+      - SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
   c2:
     image: jdeathe/centos-ssh
     restart: always
     environment:
       - SSH_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMEmFEu1LnoQgxMODc9CkdYEBG7HuJnex4lkRsG3A4uhx4DrzmMYsXcjO1yd0iNcp5jYTHPs2L+xJpwTIQyfGeT1c6nIMBZ8ftnv/6O6hhI1o6qN0VkCNY43W/QLc+6QAm9ttYDdRVjqdzn/riUQUIGd5hE4qHnN3AEt9nKnTKsOm8jfFn9nNCTnz/McvRuQqGwhslnm1ysr6P59Z4B1AxL5KbHHjP5ObGQ07wVBq+7eWIARy9L5+e2bboptanBhTzDkRJPaplv2sMNOvQ5i/eY8V8bM+Zr6OU30brs/o6q7y4c9VqL5cd3J6aA3CePlzSSyK4nEwRcXPXYeF+K/GI2QrQef2Gu0pTB2LcW1Jn+mKCZeNQRHfRWk6ha3TU26VtT8VEdzln5E1WJTsOIuk8GhjUtOndnA+lgkCoNo1Gv1v/oRkTn5GtLbJpyCAfbMeRwioSXKF1DFofJu9JRfwIBnUCVNL7XmnPxt+z9YcOSgUcOwcSulvdgK53Ja3VTG8= tvorogme@archlinux
+      - SSH_SUDO=ALL=(ALL) NOPASSWD:ALL
